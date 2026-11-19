@@ -1,0 +1,5 @@
+data/SMSSpamCollection
+models/*.joblib
+__pycache__/
+.ipynb_checkpoints/
+resultados_corte3.zip
