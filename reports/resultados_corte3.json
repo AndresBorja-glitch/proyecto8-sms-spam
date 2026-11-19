@@ -1,0 +1,17 @@
+{
+"fuente": "Corrida en Colab del 2026-11-19, scikit-learn 1.6.1, dataset UCI (5572 leídos, 5169 únicos; partición 3618/775/776)",
+"formato_metricas": "[precision_spam, recall_spam, f1_spam, FP_ham_bloqueado, FN_spam_que_pasa, accuracy]",
+"validacion": {"Dummy": [0, 0, 0, 0, 98], "Regla": [0.6988, 0.5918, 0.6409, 25, 40], "NB_11": [1.0, 0.5612, 0.719, 0, 43], "SVM_Corte2": [0.9773, 0.8776, 0.9247, 2, 12]},
+"representaciones_validacion_pr_auc": {"Palabras (1,2) [Corte 2]": 0.9712, "Caracteres (2,5)": 0.9913, "Palabras + caracteres": 0.9944, "Embeddings MiniLM + LR (referencia)": 0.9847},
+"representacion_final": "Palabras + caracteres",
+"brier_validacion": {"sin_calibrar_minmax": 0.0438, "calibrado": 0.0072},
+"brier_test": 0.0075,
+"umbral": 0.58,
+"sensibilidad_costo": [["1:1", 0.24, 12, 21], ["2:1", 0.47, 3, 32], ["5:1", 0.58, 1, 40], ["10:1", 0.58, 1, 40], ["20:1", 0.58, 1, 40]],
+"test": {"Dummy": [0, 0, 0, 0, 98, 0.8737], "Regla": [0.7558, 0.6633, 0.7065, 21, 33, 0.9304], "NB": [1.0, 0.6224, 0.7673, 0, 37, 0.9523], "SVM_Corte2": [0.989, 0.9184, 0.9524, 1, 8, 0.9884], "Final_umbral_0.5": [0.9789, 0.949, 0.9637, 2, 5, 0.991], "Final_umbral_0.58": [0.9894, 0.949, 0.9688, 1, 5, 0.9923]},
+"pr_auc_test": {"SVM_Corte2": 0.9791, "Final": 0.9875},
+"matriz_confusion_final": {"ham_ok": 677, "FP": 1, "FN": 5, "spam_ok": 93},
+"efecto_umbral_test": [[0.2, 5, 3], [0.3, 5, 5], [0.4, 3, 5], [0.5, 2, 5], [0.58, 1, 5], [0.6, 1, 5], [0.7, 1, 8], [0.8, 0, 9], [0.9, 0, 11]],
+"robustez_recall": {"Final": {"Original": 0.949, "MAYUSCULAS": 0.949, "Leetspeak": 0.9388, "Palabras con puntos": 0.898, "Sin numeros": 0.898}, "SVM_Corte2": {"Original": 0.9184, "MAYUSCULAS": 0.9184, "Leetspeak": 0.8163, "Palabras con puntos": 0.8776, "Sin numeros": 0.8878}},
+"fuera_de_dominio_aciertos": {"Espanol_ham": "3/3", "Espanol_spam": "2/3", "Spam_actual_ingles": "0/3", "Ingles_cotidiano": "2/2", "Ingles_estilo_corpus": "1/1"}
+}
