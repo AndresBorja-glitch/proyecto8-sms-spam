@@ -1,6 +1,7 @@
 # Proyecto 8 — Clasificación automática de SMS no deseados
 
 **Profundización III · Inteligencia Artificial · Banco de proyectos integradores 2026-II**
+
 Equipo: Andres Borja, Cristian Londoño, Daniel Florez y Ana Jurado
 
 Clasificador de SMS en **ham** (legítimo) o **spam** (no deseado), entrenado y evaluado localmente con el dataset público *SMS Spam Collection* de UCI. El criterio central del proyecto: **bloquear un mensaje legítimo es más grave que dejar pasar un spam**.
@@ -28,16 +29,14 @@ Estos números describen el desempeño **en este dataset**. Con spam actual (smi
 ├── requirements.txt
 ├── data/                         # el notebook descarga aquí el dataset (ver data/README.md)
 ├── notebooks/
-│   ├── proyecto_sms_spam_corte2.ipynb   # benchmark y modelo provisional
-│   └── proyecto_sms_spam_corte3.ipynb   # pipeline final, profundización, test, robustez, inferencia
+│   └── proyecto_sms_spam_corte3.ipynb   # proyecto completo: datos, modelos, profundización, test, robustez, inferencia y demo
 ├── src/
 │   └── inferencia.py             # clasificar_sms(texto) para mensajes nuevos
-├── models/                       # modelo_final_sms.joblib (lo genera el notebook del Corte 3)
+├── models/                       # modelo_final_sms.joblib (lo genera el notebook)
 └── reports/
     ├── MODEL_CARD.md             # ficha del modelo
     ├── DATASET_CARD.md           # ficha del dataset
-    ├── resultados_corte3.json    # números usados en la presentación final
-    └── figuras/
+    └── resultados_corte3.json    # números usados en la presentación final
 ```
 
 ## Cómo reproducir
@@ -51,7 +50,7 @@ Estos números describen el desempeño **en este dataset**. Con spam actual (smi
    - evalúa una sola vez en el test reservado,
    - corre las pruebas de robustez y fuera de dominio,
    - guarda el modelo en `models/` y escribe `src/inferencia.py`,
-   - genera la model card, la ficha del dataset y `resultados_corte3.zip`.
+   - genera figuras, la model card, la ficha del dataset y `resultados_corte3.zip`.
 3. Tiempo aproximado en Colab: 3 minutos (la comparación con embeddings descarga el modelo MiniLM la primera vez).
 
 ## Uso de la función de inferencia
